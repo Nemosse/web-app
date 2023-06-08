@@ -1,0 +1,112 @@
+.card-showbox {
+  position: relative;
+  justify-content: center;
+  width: 90%;
+  height: auto;
+  /* margin: auto; */
+  margin: auto;
+
+  box-shadow: 0px 0px 50px #2E3840;
+  background-color: red;
+	/* object-fit: contain; */
+
+	/* box-sizing: border-box; */
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+  /* padding: 10% 0; */
+  animation: fadeIn 0.5s;
+}
+
+.card-showbox.requestCard {
+  position: relative;
+  justify-content: center;
+  width: 22.5%;
+  height: auto;
+  margin: 1%;
+  flex-shrink: 0;
+  
+}
+.card-showbox.cardShowCase {
+  width: 100%;
+  height: auto;
+
+}
+
+
+/* 
+.cl-card-showbox {
+  position: relative;
+  justify-content: center;
+  width: 22.5%;
+  height: auto;
+  box-shadow: 0px 0px 50px #2E3840;
+  margin: 1%;
+
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+
+  flex-shrink: 0;
+} */
+
+.card-showbox.hoverable:hover {
+  transform: scale(1.1);
+	z-index: 1;
+  box-shadow: 0px 0px 50px rgba(255, 3, 3, 0.611);
+}
+
+.card-showbox.disableHover {
+  pointer-events: none;
+  -webkit-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none;
+  animation: normFadeIn 3s;
+}
+
+.card-showbox a {
+  position: relative;
+  justify-content: center;
+  height: auto;
+  margin: auto;
+  /* margin: auto; */
+  box-shadow: 0px 0px 50px #2E3840;
+
+	object-fit: contain;
+
+	box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+  /* padding: 10% 0; */
+
+ 
+
+}
+
+.card {
+  /* position: relative; */
+  object-fit: cover;
+  max-width: 100%; 
+  max-height: 100%;
+  height: auto;
+	width: auto;
+	box-sizing: border-box;
+}
+
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -10%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes normFadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
